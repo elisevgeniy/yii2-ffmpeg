@@ -60,7 +60,12 @@ class Ffmpeg
 							$cmd2 = "$ffmpeg -y -i $input_file -vf scale=".$thumb_nail_size." $thumbnail_image";
 							exec($cmd2,$results);
 						}
-					}
+					} elseif ($thumbnail_size == '') {
+                        if ($type == 'video') {
+                            $cmd2 = "$ffmpeg -y -i $input_file -t 1 -f image2 $thumbnail_image";
+                            exec($cmd2,$results);
+                        }
+                    }
 				}
 			}
 			return true;

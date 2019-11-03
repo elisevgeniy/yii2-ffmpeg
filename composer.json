@@ -25,7 +25,7 @@
     "repositories":[
     {
         "type": "git",
-        "url": "https://github.com/elisevgeniy/test2.git"
+        "url": "https://github.com/elisevgeniy/yii2-ffmpeg"
     }
 ]
 }

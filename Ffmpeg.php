@@ -38,13 +38,13 @@ class Ffmpeg
 			$thumb_nail_size = $thumbnail_size;
 		}
 		if ($type != '') {
-			if ($type == 'video') {
+			if ($type == 'video' && $target_file != '') {
 				$cmd = "$ffmpeg -y -i $input_file -c:v libx264 $video_bit_rate $audio_bit_rate -strict -2 $target_file";
 				exec($cmd,$results);
-			} else if ($type == 'audio') {
+			} else if ($type == 'audio' && $target_file != '') {
 				$cmd = "$ffmpeg -y -i $input_file $audio_bit_rate $target_file";
 				exec($cmd,$results);
-			} else if ($type == 'image') {
+			} else if ($type == 'image' && $target_file != '') {
 				$cmd = "$ffmpeg -y -i $input_file -f image2 $target_file";
 				exec($cmd,$results);
 			}

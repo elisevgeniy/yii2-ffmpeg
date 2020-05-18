@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist rbtphp/yii2-ffmpeg "*"
+php composer.phar require --prefer-dist elisevgeniy/yii2-ffmpeg "*"
 ```
 
 or add
 
 ```
-"rbtphp/yii2-ffmpeg": "*"
+"elisevgeniy/yii2-ffmpeg": "*"
 ```
 
 to the require section of your `composer.json` file.
